@@ -8,7 +8,8 @@ $query = 'select * from dbo.Products';
   
 // simple query  
 $stmt = $conn->query( $query );  
-while ( $row = $stmt->fetch( PDO::FETCH_ASSOC ) ){  
+while ( $row = $stmt->fetch( PDO::FETCH_ASSOC ) ){ 
+   echo " row 1";
    print_r( $row['Name'] ."\n" );  
 }  
 ?>
