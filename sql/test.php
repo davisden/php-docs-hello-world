@@ -1,16 +1,13 @@
 <?php // test.php
 require_once 'login.php';
 echo "Start query";
- 
-   $tsql= "SELECT  ProductId, ProductName, Price, ProductDescription
-         FROM dbo.Products";
-    $getResults= sqlsrv_query($conn, $tsql);
-    echo ("Reading data from table" . PHP_EOL);
-    if ($getResults == FALSE)
-        echo (sqlsrv_errors());
-    while ($row = sqlsrv_fetch_array($getResults, SQLSRV_FETCH_ASSOC)) {
-     echo ($row['ProductName'] . " " . $row['ProductName'] . PHP_EOL);
-    }
-    sqlsrv_free_stmt($getResults);
+
+$query = 'select * from dbo.Products';  
+  
+// simple query  
+$stmt = $conn->query( $query );  
+while ( $row = $stmt->fetch( PDO::FETCH_ASSOC ) ){  
+   print_r( $row['Name'] ."\n" );  
+}  
 echo "End query";
 ?>
