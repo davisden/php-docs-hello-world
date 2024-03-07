@@ -2,7 +2,7 @@
 require_once 'login.php';
  
    $tsql= "SELECT  ProductId, ProductName, Price, ProductDescription
-         FROM dbo.product";
+         FROM dbo.Products";
     $getResults= sqlsrv_query($conn, $tsql);
     echo ("Reading data from table" . PHP_EOL);
     if ($getResults == FALSE)
