@@ -9,10 +9,12 @@ catch (PDOException $e) {
     print("Error connecting to SQL Server.");
     die(print_r($e));
 }
-
-function querySQLserver($query)
-  {
-    global $pdo;
-    return $pdo->query($query);
-  }
+echo "Fetching";
+$query = 'select * from dbo.Products';  
+  
+// simple query  
+$stmt = $conn->query( $query );  
+while ( $row = $stmt->fetch( PDO::FETCH_ASSOC ) ){  
+   print_r( $row['Name'] ."\n" );  
+}  
 ?>
