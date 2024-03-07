@@ -1,5 +1,6 @@
 <?php // test.php
 require_once 'login.php';
+echo "Start query";
  
    $tsql= "SELECT  ProductId, ProductName, Price, ProductDescription
          FROM dbo.Products";
@@ -11,4 +12,5 @@ require_once 'login.php';
      echo ($row['ProductName'] . " " . $row['ProductName'] . PHP_EOL);
     }
     sqlsrv_free_stmt($getResults);
+echo "End query";
 ?>
