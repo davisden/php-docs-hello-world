@@ -9,4 +9,10 @@ catch (PDOException $e) {
     print("Error connecting to SQL Server.");
     die(print_r($e));
 }
+
+function querySQLserver($query)
+  {
+    global $pdo;
+    return $pdo->query($query);
+  }
 ?>
