@@ -9,6 +9,6 @@ $query = 'select * from dbo.Products';
 // simple query  
 $stmt = $conn->query( $query );  
 while ( $row = $stmt->fetch( PDO::FETCH_ASSOC ) ){ 
-   echo "<tr><td>".$row['ProductID]."</td><td>".$row['ProductName']."</td><td>".$row['Price']."</td><td>".$row['ProductDescription]."</td</tr>";
+   echo "<tr><td>".$row['ProductID]."</td><td>".$row['ProductName']."</td><td>".$row['Price']."</td><td>".$row['ProductDescription]."</td></tr>";
 }  
 ?>
