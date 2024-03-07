@@ -1,4 +1,5 @@
 <?php
+    echo "Starting"
     $serverName = "tcp:itecazure.database.windows.net,1433"; // update me
     $connectionOptions = array(
         "Database" => "demoitec24", // update me
