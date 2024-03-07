@@ -9,7 +9,7 @@ $query = 'select * from dbo.Products';
 // simple query  
 $stmt = $conn->query( $query );  
 while ( $row = $stmt->fetch( PDO::FETCH_ASSOC ) ){ 
-   echo " row 1";
+   echo $row['Name'];
    print_r( $row['Name'] ."\n" );  
 }  
 ?>
