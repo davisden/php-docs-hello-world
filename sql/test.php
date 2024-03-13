@@ -7,7 +7,7 @@ $query = 'select * from dbo.Products';
 // simple query  
 $stmt = $conn->query( $query );  
 while ( $row = $stmt->fetch( PDO::FETCH_ASSOC ) ){  
-   echo $row['ProductName'] ."\n";  
+   echo $row['ProductName'] ."<br />";  
 }  
 echo "End query";
 ?>
